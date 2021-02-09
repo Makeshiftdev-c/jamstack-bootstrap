@@ -1,0 +1,14 @@
+---
+layout: layouts/home.njk
+permalink: /examples/
+eleventyNavigation:
+    key: Example
+    order: 3
+---
+
+<div class="container mt-4">
+    <h1>Example Archive</h1>
+
+    {% set exampleslist = collections.examples %}
+    {% include "exampleslist.njk" %}
+</div>

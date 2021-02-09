@@ -12,5 +12,12 @@ eleventyNavigation:
   {% set postslistCounter = collections.posts | length %}
   {% include "postslist.njk" %}
 
+  {% set maxExamples = collections.examples.length | min(3) %}
+  <h2>Latest {% if maxExamples == 1 %}Example{% else %}{{ maxExamples }} Examples{% endif %}</h2>
+
+  {% set exampleslist = collections.examples | head(-3) %}
+  {% set exampleslistCounter = collections.examples | length %}
+  {% include "exampleslist.njk" %}
+
   <p class="mt-4">More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
 </div>

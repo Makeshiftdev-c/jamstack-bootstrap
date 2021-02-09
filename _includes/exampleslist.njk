@@ -1,0 +1,23 @@
+<div class="row">
+    {% for example in exampleslist | reverse %}
+        <div class="col-md-4">
+            <a href="{{ example.url | url }}" class="examplelist-link">
+                {% if example.data.image %}
+                    <img src="{{ example.data.image }}" alt="image">
+                {% endif %}
+            </a>
+             <a href="{{ example.url | url }}" class="examplelist-link">{% if example.data.title %}{{ example.data.title }}{% else %}<code>{{ example.url }}</code>{% endif %}</a>
+             <div class="timeContainer">
+                 <time class="examplelist-date" datetime="{{ example.date | htmlDateString }}">{{ example.date | readableDate }}</time>
+             </div>
+             <div class="tagContainer">
+                 {% for tag in example.data.tags %}
+                    {% if collections.tagList.indexOf(tag) != -1 %}
+                        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+                        <a href="{{ tagUrl | url }}" class="example-tag">{{ tag }}</a>
+                    {% endif %}
+                 {% endfor %}
+             </div>
+        </div>
+    {% endfor %}
+</div>
