@@ -66,7 +66,7 @@ eleventyNavigation:
             </div>
             <div class="col-12">
                 <div class="form-floating">
-                    <textarea name="message" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" required></textarea>
+                    <textarea name="message" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 300px" required></textarea>
                     <label for="floatingTextarea2">Message</label>
                     <div class="valid-feedback">
                         Looks good!
