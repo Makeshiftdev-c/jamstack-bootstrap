@@ -1,31 +1,56 @@
 ---
 layout: layouts/post.njk
-title: Contact
 templateClass: tmpl-post
 eleventyNavigation:
   key: Contact
   order: 5
 ---
 
-<div class="container">
-    <form name="contact" method="POST" data-netlify="true">
-    <p>
-        <label>Your Name: <input type="text" name="name" required /></label>   
-    </p>
-    <p>
-        <label>Your Email: <input type="email" name="email" required /></label>
-    </p>
-    <p>
-        <label>Your Role: <select name="role[]" multiple>
-        <option value="leader">Leader</option>
-        <option value="follower">Follower</option>
-        </select></label>
-    </p>
-    <p>
-        <label>Message: <textarea name="message"></textarea></label>
-    </p>
-    <p>
-        <button type="submit">Send</button>
-    </p>
+<div class="container-lg d-flex flex-column align-item-center justify-content-center">
+    <h1>Contact</h1>
+    <form name="contact" method="POST" data-netlify="true" autocomplete="off">
+        <div class="row g-2">
+            <div class="col-md-6 margin-top-form-input-first">
+                <div class="form-floating">
+                    <input name="first-name" type="text" class="form-control" id="floating-first-name" placeholder="Joe" />
+                    <label for="floating-first-name">First Name</label>
+                </div>
+            </div>
+            <div class="col-md-6 ">
+                <div class="form-floating">
+                    <input name="last-name" type="text" class="form-control" id="floating-last-name" placeholder="Vloggs" />
+                    <label for="floating-last-name">Last Name</label>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="form-floating">
+                    <input name="email" type="email" class="form-control" id="floating-email" placeholder="Joe_Vloggs@example.com" />
+                    <label for="floating-email">Email</label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-floating">
+                    <select name="role" class="form-select form-select-sm pb-2" id="floating-select" aria-label="Select role">
+                        <option selected>Please choose an option</option>
+                        <option value="leader">Leader</option>
+                        <option value="follower">Follower</option>
+                        <option value="usuper">Usuper</option>
+                        <option value="challenger">Challenger</option>
+                    </select>
+                    <label for="floating-select">Role</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-floating">
+                    <textarea name="message" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">Message</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="d-grid col-lg-6 col-sm-12 me-auto">
+                    <button class="btn btn-outline-primary" type="submit">Send</button>
+                </div>
+            </div>
+        </div>
     </form>
 </div>

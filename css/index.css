@@ -39,6 +39,9 @@ a[href]:visited {
 main :first-child {
   margin-top: 0;
 }
+div.margin-top-form-input-first {
+  margin-top: var(--bs-gutter-y);
+}
 header {
   border-bottom: 1px dashed var(--lightgray);
 }
