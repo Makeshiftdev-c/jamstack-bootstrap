@@ -199,7 +199,8 @@ pre {
   color: var(--white);
 }
 a[href].post-tag,
-a[href].post-tag:visited a[href].example-tag,
+a[href].post-tag:visited,
+a[href].example-tag,
 a[href].example-tag:visited {
   color: #fff;
 }
