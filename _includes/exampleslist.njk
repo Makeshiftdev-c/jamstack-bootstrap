@@ -1,5 +1,5 @@
 <div class="row">
-    {% for example in exampleslist | reverse %}
+    {% for example in exampleslist %}
         <div class="col-md-4">
             <a href="{{ example.url | url }}" class="examplelist-link">
                 {% if example.data.image %}

@@ -13,7 +13,7 @@ eleventyNavigation:
   {% include "postslist.njk" %}
 
   {% set maxExamples = collections.examples.length | min(3) %}
-  <h2>Latest {% if maxExamples == 1 %}Example{% else %}{{ maxExamples }} Examples{% endif %}</h2>
+  <h2>Latest {% if maxExamples == 1 %}JavaScript Session{% else %}{{ maxExamples }} JavaScript Sessions{% endif %}</h2>
 
   {% set exampleslist = collections.examples | head(-3) %}
   {% set exampleslistCounter = collections.examples | length %}

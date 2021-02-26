@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-example
+---
+<h1>{{ title }}</h1>
+
+{{ content | safe }}
+
+<hr>
+<ul>
+  {%- set nextExample = collections.examples | getNextCollectionItem(page) %}
+  {%- if nextExample %}<li>Next: <a href="{{ nextExample.url | url }}">{{ nextExample.data.title }}</a></li>{% endif %}
+  {%- set previousExample = collections.examples | getPreviousCollectionItem(page) %}
+  {%- if previousExample %}<li>Previous: <a href="{{ previousExample.url | url }}">{{ previousExample.data.title }}</a></li>{% endif %}
+</ul>
