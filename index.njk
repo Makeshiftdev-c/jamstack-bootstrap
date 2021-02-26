@@ -12,6 +12,8 @@ eleventyNavigation:
   {% set postslistCounter = collections.posts | length %}
   {% include "postslist.njk" %}
 
+  <p class="mt-4">More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+
   {% set maxExamples = collections.examples.length | min(3) %}
   <h2>Latest {% if maxExamples == 1 %}JavaScript Session{% else %}{{ maxExamples }} JavaScript Sessions{% endif %}</h2>
 
@@ -19,5 +21,6 @@ eleventyNavigation:
   {% set exampleslistCounter = collections.examples | length %}
   {% include "exampleslist.njk" %}
 
-  <p class="mt-4">More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+  <p class="mt-4">More sessions can be found in <a href="{{ '/portfolio/' | url }}">JavaScript</a>.</p>
+  
 </div>
