@@ -1,12 +1,12 @@
 ---
-layout: layouts/post.njk
+layout: layouts/base.njk
 templateClass: tmpl-post
 eleventyNavigation:
   key: Contact
   order: 5
 ---
 
-<div class="container-lg d-flex flex-column align-item-center justify-content-center">
+<div class="container-lg d-flex flex-column align-item-center justify-content-center mt-4">
     <h1>Contact</h1>
     <form name="contact" method="POST" data-netlify="true" autocomplete="off" class="needs-validation" novalidate>
         <div class="row g-2">
