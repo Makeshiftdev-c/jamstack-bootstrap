@@ -52,6 +52,13 @@ module.exports = function (eleventyConfig) {
     return Math.min.apply(null, numbers);
   });
 
+  eleventyConfig.addFilter("prettify", (titleStr) => {
+    return titleStr
+      .replace(/abdi's/i, "<span class='hand'>Abdi's</span>")
+      .replace(/jamstack/i, "<span class='robotic'>JAMStack</span>")
+      .replace(/gala/i, "<span class='hand'>Gala</span>");
+  });
+
   eleventyConfig.addCollection("tagList", function (collection) {
     let tagSet = new Set();
     collection.getAll().forEach(function (item) {

@@ -290,3 +290,11 @@ body {
   font-size: 1.1875em; /* 19px /16 */
   font-weight: 700;
 }
+
+.robotic {
+  font-family: "Krona One", sans-serif;
+}
+
+.hand {
+  font-family: "Ballet", cursive;
+}
