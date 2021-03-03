@@ -6,7 +6,7 @@ tags:
   - second-tag
   - third
 layout: layouts/example.njk
-image: https://images.pexels.com/photos/5474295/pexels-photo-5474295.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+image: https://cdn.pixabay.com/photo/2017/10/24/07/12/hacker-2883632_960_720.jpg
 ---
 
 <div class="container mt-4">
